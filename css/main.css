@@ -135,6 +135,17 @@ html {
   font-family: "Oswald", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ae852589;
+}
+
 section {
   position: relative;
   height: 100vh;
@@ -146,7 +157,7 @@ section {
   display: flex;
   justify-content: left;
   align-items: left;
-  padding: 5% 20%;
+  padding: 3% 20%;
 }
 
 section:nth-of-type(1) {
@@ -204,10 +215,31 @@ nav li {
   color: #586976;
   font-size: 24px;
   font-weight: light;
-  height: 40px;
+  transition: 0.5s;
+  height: fit-content;
   width: fit-content;
-  padding: 0 20px;
+  margin: 0 20px;
   text-align: center;
+}
+
+nav li::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  transition: 0.5s;
+  left: -10px;
+  bottom: -5px;
+  height: calc(100% + 10px);
+  width: 0;
+  background-color: white;
+}
+
+nav li:hover::before {
+  display: block;
+  width: calc(100% + 20px);
+}
+nav li:hover {
+  color: black;
 }
 
 nav li:first-of-type {
@@ -250,6 +282,32 @@ nav li:last-of-type {
   width: 70px;
   transition: 0.8s;
   height: 70px;
+}
+
+section.browse h2 {
+  position: absolute;
+}
+
+#europe-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#europe-map path,
+#europe-map circle {
+  opacity: 50%;
+  transition: 1s;
+}
+
+#europe-map path:hover,
+#europe-map circle:hover {
+  opacity: 85%;
+  cursor: pointer;
+}
+
+section.browse {
+  padding-right: 30px;
 }
 
 /* Telefonos és tabletes kinézet */
