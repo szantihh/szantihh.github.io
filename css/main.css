@@ -212,7 +212,7 @@ nav ul {
 
 nav li {
   position: relative;
-  color: #586976;
+  color: #88a9b2;
   font-size: 24px;
   font-weight: light;
   transition: 0.5s;
@@ -308,6 +308,26 @@ section.browse h2 {
 
 section.browse {
   padding-right: 30px;
+  background-color: #88a9b2;
+}
+
+.map-container {
+  position: absolute;
+  z-index: 1;
+  top: 130px;
+  height: calc(100vh - 130px);
+  width: 82%;
+  left: 18%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+section.browse h2 {
+  color: black;
 }
 
 /* Telefonos és tabletes kinézet */
@@ -316,6 +336,15 @@ section.browse {
   #navphone + label {
     display: block;
     z-index: 110;
+  }
+
+  .map-container {
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    height: calc(100vh - 95px);
+    width: 100%;
+    left: 0;
   }
 
   #cr-widget-marquee {
