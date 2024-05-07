@@ -162,7 +162,7 @@ section {
   padding: 3% 3% 3% 20%;
 }
 
-section:first-of-type div {
+.firstdiv {
   color: #88a9b2;
   font-weight: 200;
   font-size: 24px;
@@ -438,13 +438,15 @@ section.browse {
   background-color: #88a9b2;
 }
 
-.map-container {
+section:first-of-type div.map-container {
   position: absolute;
   z-index: 1;
   top: 130px;
   height: calc(100vh - 130px);
   width: 82%;
   left: 18%;
+  font-size: unset;
+  padding: 0;
 }
 
 #map {
